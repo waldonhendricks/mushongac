@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(xlsx)\nlibrary(rJava)\nlibrary(xlsx)\nreport<-\"C:\\\\Users\\\\User\\\\Documents\\\\reportTable.xlsx\"\nmyReport<-read.xlsx(report,1)\nmyReport\nsummary(myReport)\nhist(myReport$Term5,xlab=\"percentage per subject\",ylab=\"value\",col=\"Blue\",main=\"Term5 results\")\nboxplot(x=myReport ,data=\"Term3\",varwidth = TRUE,notch=FALSE)\nlibrary(ggplot2)\nlibrary(reshape2)\nreportTable=melt(myReport)\nreportTable\ncolnames(reportTable)=c(\"Subject\",\"Term\",\"Percentage\")\nreportTable\nggplot(reportTable,aes(x=\"Subject\",y=\"Percentage\"))+geom_point(aes(shape=\"Percentage\"))\n",
+    "created" : 1510380419495.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2205993374",
+    "id" : "62ED90FB",
+    "lastKnownWriteTime" : 1510383454,
+    "last_content_update" : 1510383454230,
+    "path" : "C:/Users/User/Desktop/assignment/omii.R",
+    "project_path" : "omii.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
